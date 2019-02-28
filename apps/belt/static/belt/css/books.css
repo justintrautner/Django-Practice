@@ -1,0 +1,17 @@
+div.leftbox{
+    vertical-align: top;
+    display: inline-block;
+    border: 1px solid darkcyan;
+    min-width: 500px;
+    min-height: 500px;
+    padding:5px;
+}
+
+div.rightbox{
+    vertical-align: top;
+    display: inline-block;
+    border: 1px solid darkcyan;
+    min-width: 500px;
+    min-height: 500px;
+    padding:5px;
+}

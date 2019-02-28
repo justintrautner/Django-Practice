@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Books</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'belt/css/books.css' %}">
+</head>
+<body>
+    <div class='header'>
+        <h2>Welcome, {{ user.name }} </h2>
+        <p><a href="/books/add">Add Book and Review</a></p>
+        <a href="/logout">Logout</a>
+    </div>
+    <div class="leftbox">
+        <h3>Recent Book Reviews</h3>
+        {% for review in recent_reviews %}
+        <a href="/books/{{review.books.id}}">{{ review.books.title }}</a>
+        <p>Rating:{{ review.rating }}</p>
+        <p><a href="/users/{{review.reviewer.id}}"> {{review.reviewer.name }}</a> says:{{ review.reviews }}</p>
+        <p>Reviewed on: {{ review.created_at }}</p>
+        <hr>
+        {% endfor %}
+    </div>
+    <div class="rightbox">
+        <h3>Other Books with Reviews</h3>
+        {% for book in books %}
+        <p><a href="/books/{{book.id}}">{{ book.title }}</a></p>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>

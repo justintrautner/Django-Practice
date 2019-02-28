@@ -1,0 +1,26 @@
+div.container{
+    margin: 0 auto;
+    
+}
+
+div.leftbox{
+    vertical-align: top;
+    display: inline-block;
+    width: 300px;
+    min-height: 350px;
+    border: 1px solid palegreen
+}
+div.rightbox{
+    vertical-align: top;
+    display: inline-block;
+    width: 300px;
+    min-height: 350px;
+    border: 1px solid palegreen
+}
+
+p{
+    color: blue;
+}
+p.error{
+    color:red;
+}
